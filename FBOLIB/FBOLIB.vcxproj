@@ -42,6 +42,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)d</TargetName>
+    <OutDir>$(CODE_DIR)\FBOLIB-vc12-x86\lib</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(CODE_DIR)\FBOLIB-vc12-x86\lib</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -53,6 +57,9 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PreBuildEvent>
+      <Command>mkdir "$(CODE_DIR)\FBOLIB-x86-vs12\include" &amp; copy /y "$(ProjectDir)\*.h" "$(CODE_DIR)\FBOLIB-x86-vs12\include"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -68,6 +75,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PreBuildEvent>
+      <Command>mkdir "$(CODE_DIR)\FBOLIB-x86-vs12\include" &amp; copy /y "$(ProjectDir)\*.h" "$(CODE_DIR)\FBOLIB-x86-vs12\include"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="fbolib.h" />
