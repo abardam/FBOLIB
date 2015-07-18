@@ -42,10 +42,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)d</TargetName>
-    <OutDir>$(CODE_DIR)\FBOLIB-vc12-x86\lib</OutDir>
+    <OutDir>$(CODE_DIR)\FBOLIB-x86-vs12\lib</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(CODE_DIR)\FBOLIB-vc12-x86\lib</OutDir>
+    <OutDir>$(CODE_DIR)\FBOLIB-x86-vs12\lib</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
